@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Array Object</title>
+    </head>
+    <body>
+       <h1>ARRAY</h1>
+       <h2> Klik Kanan >> Inspect >> Console</h2>
+       <script>
+          const calonpesertalomba = [
+          { nama: "Ali", umur: 17, lomba: "Sepak bola contong"},
+          { nama: "Zaki", umur: 16, lomba: "Balap Karung" },
+          { nama: "Hadid", umur: 15, lomba: "Panjat pinang" },
+          { nama: "Ghaisan", umur: 14, lomba: "Egrang"}
+          ];
+
+          console.warn("Data Awal")
+
+          calonpesertalomba.forEach(calonpesertalomba => {
+          console.log(`${calonpesertalomba.nama} berusia ${calonpesertalomba.umur} tahun akan mengikuti lomba ${calonpesertalomba.lomba}`);
+          });
+          
+          const newcalonpesertalomba = {nama: "Ghulam", umur: 13, lomba: "Makan kerupuk"}
+          calonpesertalomba.push(newcalonpesertalomba);
+
+          console.warn("Data Setelah Push")
+
+          calonpesertalomba.forEach(calonpesertalomba => {
+          console.log(`${calonpesertalomba.nama} berusia ${calonpesertalomba.umur} tahun akan mengikuti lomba ${calonpesertalomba.lomba}`);
+          });
+
+          const indexToRemove = 
+          calonpesertalomba.findIndex(calonpesertalomba => calonpesertalomba.nama ==="Hadid");
+
+          if (indexToRemove !== -1){
+            calonpesertalomba.splice(indexToRemove,1)}
+
+          console.warn("Salah satu data dihapus")
+
+          calonpesertalomba.forEach(calonpesertalomba => {
+          console.log(`${calonpesertalomba.nama} berusia ${calonpesertalomba.umur} tahun akan mengikuti lomba ${calonpesertalomba.lomba}`);
+          });
+
+    
+       </script>
+    </body>
+</html>
